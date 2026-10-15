@@ -45,7 +45,7 @@
         </div>
 
         <span class="member-status">
-          ● MEMBER ACCESS
+          ● MEMBERSHIP PREVIEW
         </span>
       </div>
 
@@ -63,7 +63,7 @@
               inside the private room.
             </p>
 
-            <button class="primary-button locked-content">
+            <button type="button" class="primary-button locked-content" onclick="showMemberNotice()">
               Open Collection
             </button>
           </div>
@@ -83,7 +83,7 @@
               updates from Talia.
             </p>
 
-            <button class="primary-button locked-content">
+            <button type="button" class="primary-button locked-content" onclick="showMemberNotice()">
               Open Collection
             </button>
           </div>
@@ -103,7 +103,7 @@
               for members.
             </p>
 
-            <button class="primary-button locked-content">
+            <button type="button" class="primary-button locked-content" onclick="showMemberNotice()">
               Open Collection
             </button>
           </div>
@@ -124,5 +124,16 @@
     <p>© 2026 Talia Weis. All rights reserved.</p>
   </footer>
 
+  <div class="member-notice" id="memberNotice" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+    <div class="member-notice-card">
+      <button type="button" class="notice-close" onclick="closeMemberNotice()" aria-label="Close">&times;</button>
+      <p class="eyebrow">TALIA WEIS MEMBERSHIP</p>
+      <h2 id="noticeTitle">Your private collection awaits.</h2>
+      <p>Member access is currently being prepared. Secure sign-in and membership verification will be added before the private collection launches.</p>
+      <button type="button" class="primary-button" onclick="closeMemberNotice()">Got it</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
